@@ -1,0 +1,221 @@
+first time git setting before you commit any changes. After these setting onlt commit can be used
+git config --global user.name "Nitu Datir"
+git config --global user.email "nitudatir@gmail.com"
+
+------------------------------------------------------------------
+command prompt -
+C:\Users\admin>git --version
+git version 2.17.0.windows.1
+
+C:\Users\admin>git init repo1
+Initialized empty Git repository in C:/Users/admin/repo1/.git/
+
+C:\Users\admin>explorer repo1
+
+C:\Users\admin>explorer repo1
+
+C:\Users\admin>cd repo1
+
+C:\Users\admin\repo1>git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+
+C:\Users\admin\repo1>git add .
+
+C:\Users\admin\repo1>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   TestGitRepoFile.txt.txt
+
+
+C:\Users\admin\repo1>git commit -m "first"
+[master (root-commit) 089c4fc] first
+ 1 file changed, 1 insertion(+)
+ create mode 100644 TestGitRepoFile.txt.txt
+
+C:\Users\admin\repo1>git config --help
+
+C:\Users\admin\repo1>git blame TestGitRepoFile.txt
+fatal: no such path 'TestGitRepoFile.txt' in HEAD
+
+C:\Users\admin\repo1>git commit -m "first"
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\admin\repo1>git commit -m "first"
+On branch master
+Changes not staged for commit:
+        modified:   TestGitRepoFile.txt.txt
+
+no changes added to commit
+
+C:\Users\admin\repo1>git commit -m -a
+On branch master
+Changes not staged for commit:
+        modified:   TestGitRepoFile.txt.txt
+
+no changes added to commit
+
+C:\Users\admin\repo1>git blame TestGitRepoFile.txt
+fatal: no such path 'TestGitRepoFile.txt' in HEAD
+
+C:\Users\admin\repo1>git blame TestGitRepoFile.txt
+fatal: no such path 'TestGitRepoFile.txt' in HEAD
+
+C:\Users\admin\repo1>git log
+commit 089c4fc78c935bdf61d950164992111314d50998 (HEAD -> master)
+Author: <C3><84>parna <<C3><A4>parna.mahajan2007@gmail.com>
+Date:   Fri Jun 15 15:19:07 2018 +0530
+
+    first
+
+C:\Users\admin\repo1>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   TestGitRepoFile.txt.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\admin\repo1>git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    TestGitRepoFile.txt.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        TestGitRepoFile.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\admin\repo1>git add .
+
+C:\Users\admin\repo1>git commit -m "added file"
+[master d780852] added file
+ 1 file changed, 1 insertion(+)
+ rename TestGitRepoFile.txt.txt => TestGitRepoFile.txt (78%)
+
+C:\Users\admin\repo1>git blame TestGitRepoFile.txt
+^089c4fc TestGitRepoFile.txt.txt (<C3><84>parna 2018-06-15 15:19:07 +0530 1) tes
+t test test
+d7808520 TestGitRepoFile.txt     (<C3><84>parna 2018-06-15 15:31:31 +0530 2) tes
+t
+
+C:\Users\admin\repo1>git commit -a -m "updating file"
+[master f3cb70a] updating file
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+C:\Users\admin\repo1>git commit -m "updated file"
+On branch master
+nothing to commit, working tree clean
+
+C:\Users\admin\repo1>git log
+commit f3cb70a19d004419b9c918df4c39cae0adcd1ad7 (HEAD -> master)
+Author: <C3><84>parna <<C3><A4>parna.mahajan2007@gmail.com>
+Date:   Fri Jun 15 15:35:18 2018 +0530
+
+    updating file
+
+commit d7808520b985035dfeceea245ca76d7ce284d05e
+Author: <C3><84>parna <<C3><A4>parna.mahajan2007@gmail.com>
+Date:   Fri Jun 15 15:31:31 2018 +0530
+
+    added file
+
+commit 089c4fc78c935bdf61d950164992111314d50998
+Author: <C3><84>parna <<C3><A4>parna.mahajan2007@gmail.com>
+Date:   Fri Jun 15 15:19:07 2018 +0530
+
+    first
+
+C:\Users\admin\repo1>diff 15fc 4562
+'diff' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\admin\repo1>git diff 15fc 4562
+fatal: ambiguous argument '15fc': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+C:\Users\admin\repo1>git diff
+
+C:\Users\admin\repo1>git diff
+diff --git a/TestGitRepoFile.txt b/TestGitRepoFile.txt
+index 6f10fcf..6880a2b 100644
+--- a/TestGitRepoFile.txt
++++ b/TestGitRepoFile.txt
+@@ -1,2 +1,2 @@
+ test test test
+-test test
+\ No newline at end of file
++test test test
+\ No newline at end of file
+
+C:\Users\admin\repo1>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   TestGitRepoFile.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        myhtml.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+C:\Users\admin\repo1>git add .
+
+C:\Users\admin\repo1>git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   TestGitRepoFile.txt
+        new file:   myhtml.html
+
+
+C:\Users\admin\repo1>git commit -m "two files"
+[master 1a3a8de] two files
+ 2 files changed, 7 insertions(+), 1 deletion(-)
+ create mode 100644 myhtml.html
+
+C:\Users\admin\repo1>git log
+commit 1a3a8de131b127f5ef5969986f0f6087ca2648ce (HEAD -> master)
+Author: <C3><84>parna <<C3><A4>parna.mahajan2007@gmail.com>
+Date:   Fri Jun 15 15:47:30 2018 +0530
+
+    two files
+
+commit f3cb70a19d004419b9c918df4c39cae0adcd1ad7
+Author: <C3><84>parna <<C3><A4>parna.mahajan2007@gmail.com>
+Date:   Fri Jun 15 15:35:18 2018 +0530
+
+    updating file
+
+commit d7808520b985035dfeceea245ca76d7ce284d05e
+Author: <C3><84>parna <<C3><A4>parna.mahajan2007@gmail.com>
+Date:   Fri Jun 15 15:31:31 2018 +0530
+
+    added file
+
+commit 089c4fc78c935bdf61d950164992111314d50998
+Author: <C3><84>parna <<C3><A4>parna.mahajan2007@gmail.com>
+Date:   Fri Jun 15 15:19:07 2018 +0530
+
+    first
+
+C:\Users\admin\repo1>
